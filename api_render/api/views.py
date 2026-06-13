@@ -1,6 +1,5 @@
-from django.http import JsonResponse
+from django.http import HttpResponse
 
-def home(request):
-    return JsonResponse({
-        "mensagem": "API Django funcionando"
-    })
+def sentry_test(request):
+    1 / 0
+    return HttpResponse("ok")

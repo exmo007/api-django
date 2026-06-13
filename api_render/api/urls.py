@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import home
+from .views import sentry_test
 
 urlpatterns = [
-    path('', home),
+    path("sentry-test/", sentry_test),
 ]
