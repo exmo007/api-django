@@ -14,7 +14,7 @@ import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
 sentry_sdk.init(
-    dsn="SUA_DSN_AQUI",
+    dsn="COLE_AQUI_O_DSN",
     integrations=[DjangoIntegration()],
     traces_sample_rate=1.0,
 )
