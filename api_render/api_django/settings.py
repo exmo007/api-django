@@ -10,9 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-import os
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
 
-from pathlib import Path
+sentry_sdk.init(
+    dsn="SUA_DSN_AQUI",
+    integrations=[DjangoIntegration()],
+    traces_sample_rate=1.0,
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
